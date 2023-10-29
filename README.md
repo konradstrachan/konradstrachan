@@ -28,6 +28,9 @@ a lot more :D
 * [Pebble smartwatch ActivityFace](https://github.com/konradstrachan/Pebble_ActivityWatchFace)
 * [Multi-market limit order matching engine](https://github.com/konradstrachan/MatchingEngine)
 
+<a href="https://github.com/konradstrachan/konradstrachan">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=konradstrachan&hide=java,html,tex&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21&langs_count=3" />
+</a>
 
 <!--
 **konradstrachan/konradstrachan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
