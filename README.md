@@ -3,24 +3,19 @@
 I'm Konrad Strachan and I have been writing code since I was 7 years old. 
 
 Currently focusing on:
-🔮 web3 and blockchain technology with specific interests around scaling (approaches, Layer 1 and 2s and interoperability)
-
-🪄 intents based approaches to solving UX in web3 and beyond
-
-🚀 novel applications of tech
+* 🔮 web3 and blockchain technology with specific interests around scaling (approaches, Layer 1 and 2s and interoperability)
+* 🪄 intents based approaches to solving UX in web3 and beyond
+* 🚀 novel applications of tech
 
 More about me
 * [LinkedIn](https://www.linkedin.com/in/konrad-strachan/)
 * [CV](https://github.com/konradstrachan/konradstrachan.github.io/blob/master/Konrad%20Strachan%20CV%202023.pdf)
 
 Skills
-👨‍💻 C++, Python, Golang, TypeScript, JavaScript
-
-⛓️ Solidity, Rust
-
-💽 MySQL, SQL, Mongo
-
-🛰️ Grafana, observability and ops
+* 👨‍💻 C++, Python, Golang, TypeScript, JavaScript
+* ⛓️ Solidity, Rust
+* 💽 MySQL, SQL, Mongo
+* 🛰️ Grafana, observability and ops
 
 a lot more :D
 
