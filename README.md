@@ -1,6 +1,6 @@
 ### whoami
 
-I'm Konrad Strachan and I have been writing code since I was 7 years old. Currently focusing on web3 and blockchain technology with specific interests around scaling, Layer 1 and 2s and novel applications of tech.
+I'm Konrad Strachan and I have been writing code since I was 7 years old. Currently focusing on web3 and blockchain technology with specific interests around scaling (approaches, Layer 1 and 2s and interoperability) and intents alongside novel applications of tech.
 
 * [LinkedIn](https://www.linkedin.com/in/konrad-strachan/)
 * [CV](https://github.com/konradstrachan/konradstrachan.github.io/blob/master/Konrad%20Strachan%20CV%202023.pdf)
