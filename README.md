@@ -3,7 +3,7 @@
 I'm Konrad Strachan and I have been writing code since I was 7 years old. 
 
 Currently focusing on:
-* 🔮 web3 and blockchain technology with specific interests around scaling (approaches, Layer 1 and 2s and interoperability)
+* 🔮 web3 and blockchain with specific interests around scaling (approaches, Layer 1 and 2s and interoperability)
 * 🪄 intents based approaches to solving UX in web3 and beyond
 * 🚀 novel applications of tech
 
