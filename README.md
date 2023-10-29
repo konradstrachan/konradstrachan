@@ -1,4 +1,4 @@
-#### whoami
+### whoami
 
 I'm Konrad Strachan and I have been writing code since I was 7 years old. 
 
@@ -19,14 +19,14 @@ Skills
 
 a lot more :D
 
-#### Selected open source projects
+### Selected open source projects
 
-* [Trustless multi-token vesting](https://github.com/konradstrachan/ethdamhackathon23)
 * [Event driven execution for EVMs](https://github.com/konradstrachan/ethparishackathon23)
+* [Twitter bots without the trust](https://github.com/konradstrachan/superhackhackathon23)
 * [AI guided auditing of smart contracts](https://github.com/konradstrachan/ethpraguehackathon23)
-* [superhackhackathon23](https://github.com/konradstrachan/superhackhackathon23)
 * [Pebble smartwatch ActivityFace](https://github.com/konradstrachan/Pebble_ActivityWatchFace)
 * [Multi-market limit order matching engine](https://github.com/konradstrachan/MatchingEngine)
+* [Trustless multi-token vesting](https://github.com/konradstrachan/ethdamhackathon23)
 
 <a href="https://github.com/konradstrachan/konradstrachan">
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=konradstrachan&hide=java,html,tex,c&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21&langs_count=3" />
