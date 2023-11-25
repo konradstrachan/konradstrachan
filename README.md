@@ -33,6 +33,8 @@ a lot more :D
 * [Prediction market powered by an optimistic oracle built on the Tezos](https://github.com/konradstrachan/ethlondonhackathon2023)
 * [Algorithmic stablecoin for ZK chain Aleo](https://github.com/konradstrachan/devconnect2023aleohackathon)
 
+<br/>
+
 <a href="https://github.com/konradstrachan/konradstrachan">
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=konradstrachan&hide=java,html,tex,c&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21&langs_count=3" />
 </a>
