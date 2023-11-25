@@ -20,8 +20,9 @@ Skills
 
 a lot more :D
 
-### Selected open source projects / hackathons
 <img align="right" alt="Coding" width="400" src="https://github.com/konradstrachan/konradstrachan/assets/21056525/5f255abd-f247-4298-bc00-52699acade78">
+
+### Selected open source projects / hackathons
 
 * [Intent based bridging for web3](https://github.com/konradstrachan/ethistanbulhackathon2023)
 * [Event driven execution for EVMs](https://github.com/konradstrachan/ethparishackathon23)
