@@ -2,6 +2,8 @@
 
 I'm Konrad Strachan and I have been writing code and tinkering with tech since I was 7 years old. 
 
+<img align="right" alt="Coding" width="400" src="https://github.com/konradstrachan/konradstrachan/assets/21056525/5f255abd-f247-4298-bc00-52699acade78">
+
 Currently focusing on:
 * 🔮 web3 and blockchain with specific interests around scaling (approaches, Layer 1 and 2s and interoperability)
 * 🪄 intents based approaches to solving UX in web3 and beyond
@@ -27,6 +29,7 @@ a lot more :D
 * [AI guided auditing of smart contracts](https://github.com/konradstrachan/ethpraguehackathon23)
 * [Pebble smartwatch ActivityFace](https://github.com/konradstrachan/Pebble_ActivityWatchFace)
 * [Multi-market limit order matching engine](https://github.com/konradstrachan/MatchingEngine)
+* [Lockless queuing for inter-thread orchestration prototype](https://github.com/konradstrachan/workload_cpp) 
 * [Trustless multi-token vesting](https://github.com/konradstrachan/ethdamhackathon23)
 * [Prediction market powered by an optimistic oracle built on the Tezos](https://github.com/konradstrachan/ethlondonhackathon2023)
 * [Algorithmic stablecoin for ZK chain Aleo](https://github.com/konradstrachan/devconnect2023aleohackathon)
