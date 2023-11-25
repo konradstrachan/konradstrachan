@@ -22,16 +22,16 @@ a lot more :D
 
 ### Selected open source projects / hackathons
 
-* [Intent based bridging for web3](https://github.com/konradstrachan/ethistanbulhackathon2023) <img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon" width="24" height="24"/>
-* [Event driven execution for EVMs](https://github.com/konradstrachan/ethparishackathon23) <img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon" width="24" height="24"/>
-* [Twitter bots in web3 without the trust](https://github.com/konradstrachan/superhackhackathon23) <img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon" width="24" height="24"/>
-* [AI guided auditing of smart contracts](https://github.com/konradstrachan/ethpraguehackathon23) <img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon" width="24" height="24"/>
-* [Pebble smartwatch ActivityFace](https://github.com/konradstrachan/Pebble_ActivityWatchFace) <img src="https://github.com/abrahamhba/programming-languages-logos/blob/master/src/c/c_24x24.png" alt="C Icon" width="24" height="24"/>
-* [Multi-market limit order matching engine](https://github.com/konradstrachan/MatchingEngine) <img src="https://github.com/abrahamhba/programming-languages-logos/blob/master/src/cpp/cpp_24x24.png" alt="C++ Icon" width="24" height="24"/>
-* [Lockless queuing for inter-thread orchestration prototype](https://github.com/konradstrachan/workload_cpp) <img src="https://github.com/abrahamhba/programming-languages-logos/blob/master/src/cpp/cpp_24x24.png" alt="C++ Icon" width="24" height="24"/>
-* [Trustless multi-token vesting](https://github.com/konradstrachan/ethdamhackathon23) <img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon" width="24" height="24"/>
-* [Prediction market powered by an optimistic oracle built on the Tezos](https://github.com/konradstrachan/ethlondonhackathon2023) <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" alt="Python Icon" width="24" height="24"/>
-* [Algorithmic stablecoin for ZK chain Aleo](https://github.com/konradstrachan/devconnect2023aleohackathon) <img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon" width="24" height="24"/>
+* [Intent based bridging for web3](https://github.com/konradstrachan/ethistanbulhackathon2023) 
+* [Event driven execution for EVMs](https://github.com/konradstrachan/ethparishackathon23) 
+* [Twitter bots in web3 without the trust](https://github.com/konradstrachan/superhackhackathon23)
+* [AI guided auditing of smart contracts](https://github.com/konradstrachan/ethpraguehackathon23)
+* [Pebble smartwatch ActivityFace](https://github.com/konradstrachan/Pebble_ActivityWatchFace) 
+* [Multi-market limit order matching engine](https://github.com/konradstrachan/MatchingEngine) 
+* [Lockless queuing for inter-thread orchestration prototype](https://github.com/konradstrachan/workload_cpp)
+* [Trustless multi-token vesting](https://github.com/konradstrachan/ethdamhackathon23) 
+* [Prediction market powered by an optimistic oracle built on the Tezos](https://github.com/konradstrachan/ethlondonhackathon2023)
+* [Algorithmic stablecoin for ZK chain Aleo](https://github.com/konradstrachan/devconnect2023aleohackathon)
 
 <br/>
 
