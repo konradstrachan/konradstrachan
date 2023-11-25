@@ -1,3 +1,18 @@
+<style>
+  .icon-container {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .icon {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+</style>
+
 ### whoami
 Hello 👋, I'm Konrad Strachan from London 🇬🇧.. I started writing code when I was 7 years old and have never stopped since...
 
@@ -22,16 +37,16 @@ a lot more :D
 
 ### Selected open source projects / hackathons
 
-* [Intent based bridging for web3](https://github.com/konradstrachan/ethistanbulhackathon2023) <img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon" width="15" height="15"/> <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" alt="Python Icon" width="15" height="15"/>
-* [Event driven execution for EVMs](https://github.com/konradstrachan/ethparishackathon23) <img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon" width="15" height="15"/> <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JS Icon" width="15" height="15"/>
-* [Twitter bots in web3 without the trust](https://github.com/konradstrachan/superhackhackathon23) <img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon" width="15" height="15"/>
-* [AI guided auditing of smart contracts](https://github.com/konradstrachan/ethpraguehackathon23) <img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon" width="15" height="15"/> <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" alt="Python Icon" width="15" height="15"/>
-* [Pebble smartwatch ActivityFace](https://github.com/konradstrachan/Pebble_ActivityWatchFace) <img src="https://github.com/devicons/devicon/blob/master/icons/c/c-line.svg" alt="C Icon" width="15" height="15"/> <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JS Icon" width="15" height="15"/>
-* [Multi-market limit order matching engine](https://github.com/konradstrachan/MatchingEngine) <img src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-line.svg" alt="C++ Icon" width="15" height="15"/>
-* [Lockless queuing for inter-thread orchestration prototype](https://github.com/konradstrachan/workload_cpp) <img src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-line.svg" alt="C++ Icon" width="15" height="15"/>
-* [Trustless multi-token vesting](https://github.com/konradstrachan/ethdamhackathon23) <img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon" width="15" height="15"/>
-* [Prediction market powered by an optimistic oracle built on the Tezos](https://github.com/konradstrachan/ethlondonhackathon2023) <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" alt="Python Icon" width="15" height="15"/>
-* [Algorithmic stablecoin for ZK chain Aleo](https://github.com/konradstrachan/devconnect2023aleohackathon) <img src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon" width="15" height="15"/>
+* [Intent based bridging for web3](https://github.com/konradstrachan/ethistanbulhackathon2023) <div class="icon-container"><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon"/><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" alt="Python Icon"/></div>
+* [Event driven execution for EVMs](https://github.com/konradstrachan/ethparishackathon23) <div class="icon-container"><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon"/><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JS Icon"/></div>
+* [Twitter bots in web3 without the trust](https://github.com/konradstrachan/superhackhackathon23) <div class="icon-container"><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon"/></div>
+* [AI guided auditing of smart contracts](https://github.com/konradstrachan/ethpraguehackathon23) <div class="icon-container"><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon"/><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" alt="Python Icon"/></div>
+* [Pebble smartwatch ActivityFace](https://github.com/konradstrachan/Pebble_ActivityWatchFace) <div class="icon-container"><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/c/c-line.svg" alt="C Icon"/><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JS Icon"/></div>
+* [Multi-market limit order matching engine](https://github.com/konradstrachan/MatchingEngine) <div class="icon-container"><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-line.svg" alt="C++ Icon"/></div>
+* [Lockless queuing for inter-thread orchestration prototype](https://github.com/konradstrachan/workload_cpp) <div class="icon-container"><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/cplusplus/cplusplus-line.svg" alt="C++ Icon"/></div>
+* [Trustless multi-token vesting](https://github.com/konradstrachan/ethdamhackathon23) <div class="icon-container"><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon"/></div>
+* [Prediction market powered by an optimistic oracle built on the Tezos](https://github.com/konradstrachan/ethlondonhackathon2023) <div class="icon-container"><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" alt="Python Icon"/></div>
+* [Algorithmic stablecoin for ZK chain Aleo](https://github.com/konradstrachan/devconnect2023aleohackathon) <div class="icon-container"><img class="icon" src="https://github.com/devicons/devicon/blob/master/icons/solidity/solidity-original.svg" alt="Solidity Icon"/></div>
 
 <br/>
 
