@@ -1,4 +1,4 @@
-<img align="right" alt="Coding" width="400" src="https://github.com/konradstrachan/konradstrachan/assets/21056525/5f255abd-f247-4298-bc00-52699acade78">
+
 
 ### whoami
 Hello 👋, I'm Konrad Strachan from London 🇬🇧.. I started writing code when I was 7 years old and have never stopped since...
@@ -22,6 +22,7 @@ a lot more :D
 
 ### Selected open source projects / hackathons
 <img align="right" alt="Coding" width="400" src="https://github.com/konradstrachan/konradstrachan/assets/21056525/5f255abd-f247-4298-bc00-52699acade78">
+
 * [Intent based bridging for web3](https://github.com/konradstrachan/ethistanbulhackathon2023)
 * [Event driven execution for EVMs](https://github.com/konradstrachan/ethparishackathon23)
 * [Twitter bots in web3 without the trust](https://github.com/konradstrachan/superhackhackathon23)
