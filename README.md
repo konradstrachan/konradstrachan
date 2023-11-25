@@ -1,8 +1,7 @@
-### whoami
-
-I'm Konrad Strachan and I have been writing code and tinkering with tech since I was 7 years old. 
-
 <img align="right" alt="Coding" width="400" src="https://github.com/konradstrachan/konradstrachan/assets/21056525/5f255abd-f247-4298-bc00-52699acade78">
+
+### whoami
+Hello 👋, I'm Konrad Strachan from London 🇬🇧.. I started writing code when I was 7 years old and have never stopped since...
 
 Currently focusing on:
 * 🔮 web3 and blockchain with specific interests around scaling (approaches, Layer 1 and 2s and interoperability)
