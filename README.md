@@ -7,6 +7,7 @@ Currently focusing on:
 * 🚀 novel applications of tech
 
 More about me
+* [whoami](https://konradstrachan.github.io)
 * [LinkedIn](https://www.linkedin.com/in/konrad-strachan/)
 * [CV](https://github.com/konradstrachan/konradstrachan.github.io/blob/master/Konrad%20Strachan%20CV%202023.pdf)
 
