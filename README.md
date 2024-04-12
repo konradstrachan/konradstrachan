@@ -23,6 +23,7 @@ a lot more :D
 
 ### Selected open source projects / hackathons
 
+* [Addressing LVR in AMM pools with Uniswap v4 Hooks](https://github.com/LVooooors/ETHGlobalLondon)
 * [Intent based bridging for web3](https://github.com/konradstrachan/ethistanbulhackathon2023) 
 * [Event driven execution for EVMs](https://github.com/konradstrachan/ethparishackathon23) 
 * [Twitter bots in web3 without the trust](https://github.com/konradstrachan/superhackhackathon23)
