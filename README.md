@@ -34,6 +34,7 @@ a lot more :D
 * [Trustless multi-token vesting](https://github.com/konradstrachan/ethdamhackathon23) 
 * [Prediction market powered by an optimistic oracle built on the Tezos](https://github.com/konradstrachan/ethlondonhackathon2023)
 * [Algorithmic stablecoin for ZK chain Aleo](https://github.com/konradstrachan/devconnect2023aleohackathon)
+* [Communication between FHE shielded EVM and non-Shielded EVM based logic](Shielded RPC Prototype: Communication between Shielded and Unshielded Logic)
 
 <br/>
 
