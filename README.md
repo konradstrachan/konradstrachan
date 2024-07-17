@@ -2,9 +2,10 @@
 Hello 👋, I'm Konrad Strachan from London 🇬🇧.. I started writing code when I was 7 years old and have never stopped since...
 
 Currently focusing on:
-* 🔮 web3 and blockchain with specific interests around scaling (approaches, Layer 1 and 2s and interoperability)
-* 🪄 intents based approaches to solving UX in web3 and beyond
-* 🚀 novel applications of tech
+* ⚡ Building aneralabs.xyz 
+* 🔮 web3 and blockchain with specific interests around scaling, interop, MEV and orderflow suply chain
+* 🪄 intent based mechanisms within the chain abstracted world to solve UX in web3 and beyond
+* 🚀 generally any novel applications of tech that solve real problems
 
 More about me
 * [whoami](https://konradstrachan.github.io)
@@ -14,10 +15,8 @@ More about me
 Skills
 * 👨‍💻 C++, Python, Golang, TypeScript, JavaScript
 * ⛓️ Solidity, Rust
-* 💽 MySQL, SQL, Mongo
+* 💽 SQL and noSQL dbs particularly Mongo
 * 🛰️ Grafana, observability and ops
-
-a lot more :D
 
 <img align="right" alt="Coding" width="200px" src="https://github.com/konradstrachan/konradstrachan/assets/21056525/5f255abd-f247-4298-bc00-52699acade78">
 
