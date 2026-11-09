@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Konrad Strachan — VT220</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --phos:#ffb000; --phos-dim:rgba(255,176,0,.55); --phos-faint:rgba(255,176,0,.28);
+    --bg:#0a0603;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#050403;color:var(--phos);font-family:'VT323',ui-monospace,'Courier New',monospace;font-size:20px;line-height:1.5;display:flex;justify-content:center;padding:40px 16px}
+  .crt{width:100%;max-width:860px;position:relative;background:radial-gradient(ellipse at 50% 40%,#171006 0%,var(--bg) 80%);border-radius:26px;border:2px solid #241708;padding:46px 44px 60px;box-shadow:inset 0 0 120px rgba(0,0,0,.85), inset 0 0 30px rgba(255,176,0,.06), 0 30px 90px rgba(0,0,0,.9)}
+  .crt::after{content:'';position:absolute;inset:0;border-radius:26px;pointer-events:none;
+    background:repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0 1px,transparent 1px 3px);
+    mix-blend-mode:multiply}
+  .crt::before{content:'';position:absolute;inset:0;border-radius:26px;pointer-events:none;
+    background:radial-gradient(ellipse at 50% 50%,transparent 60%,rgba(0,0,0,.45) 100%)}
+  @keyframes flicker{0%,100%{opacity:1}92%{opacity:1}93%{opacity:.86}94%{opacity:1}97%{opacity:.94}}
+  .screen{animation:flicker 6s infinite;position:relative;z-index:1}
+  .glow{text-shadow:0 0 6px rgba(255,176,0,.55),0 0 18px rgba(255,176,0,.22)}
+  .dim{color:var(--phos-dim)}
+  .faint{color:var(--phos-faint)}
+  .bright{color:#ffd88a;text-shadow:0 0 8px rgba(255,216,138,.6)}
+  .inv{background:var(--phos);color:#140b00;padding:0 8px;text-shadow:none}
+  .prompt .u{color:#ffd88a}
+  h1{font-size:38px;margin:26px 0 6px;font-weight:400;letter-spacing:.04em}
+  h2{font-size:24px;margin:34px 0 8px;font-weight:400}
+  h2::before{content:'■ ';color:var(--phos-dim)}
+  p{margin-bottom:14px;max-width:70ch}
+  a{color:#ffd88a;text-decoration:none;border-bottom:1px solid var(--phos-faint)}
+  a:hover{background:var(--phos);color:#140b00;text-shadow:none}
+  .cursor{display:inline-block;width:.55em;height:1em;background:var(--phos);vertical-align:text-bottom;box-shadow:0 0 8px rgba(255,176,0,.7);animation:blink 1.1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  /* platform list */
+  .plat{display:flex;flex-wrap:wrap;gap:8px 22px;margin:12px 0}
+  .plat span::before{content:'[ ';color:var(--phos-faint)}
+  .plat span::after{content:' ]';color:var(--phos-faint)}
+  /* projects */
+  ul{list-style:none}
+  ul li{padding-left:26px;position:relative;margin-bottom:6px}
+  ul li::before{content:'»';position:absolute;left:0;color:var(--phos-dim)}
+  .aw{color:#ffd88a}
+  .hr{border:none;border-top:1px dashed var(--phos-faint);margin:26px 0}
+  .stats{display:flex;gap:34px;flex-wrap:wrap;margin:18px 0}
+  .stats div b{display:block;font-size:30px;color:#ffd88a}
+  .stats div span{font-size:17px;color:var(--phos-dim)}
+  .contact{display:flex;gap:26px;flex-wrap:wrap;margin-top:10px}
+  .topline{display:flex;justify-content:space-between;color:var(--phos-dim);font-size:18px;border-bottom:1px solid var(--phos-faint);padding-bottom:8px}
+  img{width:220px;float:right;margin:0 0 18px 26px;border:1px solid var(--phos-faint);border-radius:4px;filter:sepia(.5) hue-rotate(-10deg) saturate(2.4) brightness(1.05) contrast(1.05);mix-blend-mode:screen;opacity:.9}
+  footer{margin-top:40px;text-align:center;font-size:17px;color:var(--phos-faint)}
+  @media(max-width:640px){.crt{padding:26px 20px 40px}img{float:none;margin:0 0 18px}}
+</style>
+</head>
+<body>
+<div class="crt"><div class="screen glow">
+  <div class="topline"><span>VT220 — L1 AMBER PHOSPHOR</span><span>KONRAD/STRACHAN v7.0</span></div>
+
+  <div class="prompt"><span class="u">konrad@strachan</span>:~$ whoami<span class="cursor"></span></div>
+  <h1>KONRAD STRACHAN</h1>
+  <p class="dim">TECHNOLOGIST · DEVELOPER · CTO — WROTE FIRST CODE AT AGE 7, NEVER STOPPED</p>
+
+  <img src="img/profile.jpg" alt="speaking">
+
+  <p>💡 Driven by insatiable curiosity and an appetite for solving complex real-world problems.</p>
+  <p>🌟 Builds systems where the complex interactions of participants produce a <span class="bright">positive-sum outcome for all</span>.</p>
+  <p>🚀 Iterates rapidly, fails fast, instruments everything. Build → measure → learn → repeat. The tightest loop wins.</p>
+  <p>🧐 KISS principle advocate — condensing complex technical elements into clearly articulable forms.</p>
+
+  <div class="stats">
+    <div><b>$1.5B+</b><span>VOLUME PROCESSED</span></div>
+    <div><b>2020</b><span>FIRST L2 ROLLUP DEX</span></div>
+    <div><b>30+ YRS</b><span>UPTIME</span></div>
+  </div>
+
+  <hr class="hr">
+
+  <h2>CAREER // RHINOFI (FORMERLY DEVERSIFI)</h2>
+  <p>CTO for several years, navigating web3 market-cycle shifts. Built the high-performance matching engine and execution infrastructure processing <span class="bright">&gt;$1.5B USD in volume without issue</span>, powering the first production-ready Layer 2 rollup DEX in 2020 — CEX-grade speed, liquidity and convenience with decentralisation, self-custody and trustlessness. Modular liquidity sources; one was the first AMM to blend price curves with dynamically quantised orderbook liquidity.</p>
+  <p class="dim">Attends tech and web3 events worldwide — decentralisation, self-sovereignty, trustlessness, solver-based execution.</p>
+
+  <h2>THINGS I HAVE BUILT HAVE RUN ON</h2>
+  <div class="plat">
+    <span>WINDOWS</span><span>SERVERS</span><span>LINUX</span><span>SBC</span><span>ETHEREUM</span>
+    <span>N64</span><span>PEBBLE</span><span>FITBIT</span><span>CPC464</span>
+  </div>
+
+  <h2>SELECTED PROJECTS // AWARDS MARKED ★</h2>
+  <ul>
+    <li><a href="https://github.com/konradstrachan/ethistanbulhackathon2023">Intent-based bridging marketplace</a> — fee-incentivised solvers <span class="aw">★</span></li>
+    <li><a href="https://github.com/konradstrachan/ethparishackathon23">Trustless event-driven EVM callbacks</a> <span class="aw">★</span></li>
+    <li><a href="https://github.com/konradstrachan/superhackhackathon23">Trustless web3 Twitter bots</a> — account abstraction</li>
+    <li><a href="https://github.com/konradstrachan/ethpraguehackathon23">AI-guided smart contract auditing</a> — verifiable on-chain <span class="aw">★</span></li>
+    <li><a href="https://github.com/konradstrachan/Pebble_ActivityWatchFace">ActivityFace</a> — popular Pebble watchface, C + JS</li>
+    <li><a href="https://github.com/konradstrachan/MatchingEngine">MatchingEngine</a> — high-performance spot matching, C++17</li>
+    <li><a href="https://github.com/konradstrachan/workload_cpp">Workload</a> — lockless inter-thread orchestration</li>
+    <li><a href="https://github.com/konradstrachan/ethdamhackathon23">Trustless multi-token vesting</a> <span class="aw">★</span></li>
+    <li><a href="https://github.com/konradstrachan/ethlondonhackathon2023">Prediction market</a> — optimistic oracle, Tezos <span class="aw">★</span></li>
+    <li><a href="https://github.com/konradstrachan/devconnect2023aleohackathon">Algorithmic stablecoin</a> — ZK chain Aleo, Leo <span class="aw">★</span></li>
+    <li><a href="https://github.com/konradstrachan/Pebble_HopperGame">Hopper</a> — isometric Pebble game, C</li>
+    <li><a href="https://github.com/konradstrachan/ConsoleExperiments">Console framebuffer experiments</a> — C++17</li>
+  </ul>
+
+  <hr class="hr">
+
+  <h2>CONTACT</h2>
+  <div class="contact">
+    <a href="https://www.linkedin.com/in/konrad-strachan/">[LINKEDIN]</a>
+    <a href="https://github.com/konradstrachan/konradstrachan.github.io/blob/master/Konrad%20Strachan%20CV%202023.pdf">[CV.PDF]</a>
+    <a href="mailto:konrad.strachan@gmail.com">[EMAIL]</a>
+  </div>
+
+  <footer>■ NO SIGNAL ■ &nbsp; konradstrachan.github.io — option 9/12 · amber phosphor CRT</footer>
+</div></div>
+</body>
+</html>

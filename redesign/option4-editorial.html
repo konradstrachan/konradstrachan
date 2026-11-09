@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Konrad Strachan — A life in code</title>
+<style>
+  :root{
+    --paper:#f7f3ec; --ink:#1f1b16; --dim:#6f6759; --rule:#d8d0c0;
+    --accent:#b4531f; --accent-soft:#f3e0d3;
+    --serif:Georgia,'Iowan Old Style','Times New Roman',serif;
+    --sans:ui-sans-serif,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:0 28px}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(180,83,31,.35)}
+  a:hover{border-bottom-color:var(--accent)}
+  /* masthead */
+  .masthead{border-bottom:3px double var(--ink);padding:26px 0 0}
+  .mast-top{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);padding-bottom:16px}
+  .mast-title{text-align:center;padding:20px 0 26px}
+  .mast-title h1{font-size:clamp(44px,8vw,84px);letter-spacing:-.02em;line-height:1;font-weight:700}
+  .mast-title p{font-family:var(--sans);font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-top:14px}
+  /* nav */
+  nav{display:flex;justify-content:center;gap:34px;padding:14px 0;border-top:1px solid var(--rule);font-family:var(--sans);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+  nav a{color:var(--dim);border:none}
+  nav a:hover{color:var(--accent)}
+  /* lede */
+  .lede{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;padding:52px 0 56px;border-bottom:1px solid var(--rule);align-items:start}
+  .lede .drop::first-letter{font-size:74px;line-height:.85;float:left;padding:8px 12px 0 0;font-weight:700;color:var(--accent)}
+  .lede h2{font-size:13px;font-family:var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);font-weight:600;margin-bottom:18px}
+  .lede img{width:100%;border-radius:2px;filter:sepia(.15) contrast(1.02);box-shadow:0 14px 40px rgba(31,27,22,.18);transform:rotate(1.2deg)}
+  .caption{font-family:var(--sans);font-size:12.5px;color:var(--dim);margin-top:10px;font-style:italic}
+  .lede p{margin-bottom:16px}
+  /* quote */
+  .quote{border-top:3px double var(--ink);border-bottom:3px double var(--ink);padding:40px 20px;text-align:center;margin:0}
+  .quote blockquote{font-size:clamp(22px,3.6vw,32px);line-height:1.4;font-style:italic;letter-spacing:-.01em;max-width:700px;margin:0 auto}
+  .quote cite{display:block;font-family:var(--sans);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);font-style:normal;margin-top:16px}
+  /* sections */
+  section{padding:56px 0;border-bottom:1px solid var(--rule)}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:26px}
+  .sec-head h2{font-size:clamp(26px,4vw,36px);letter-spacing:-.015em;line-height:1.15}
+  .sec-head .no{font-family:var(--sans);font-size:13px;color:var(--accent);letter-spacing:.1em}
+  section p{margin-bottom:16px;max-width:720px}
+  /* timeline */
+  .tl{border-left:2px solid var(--ink);margin-left:6px;padding-left:30px}
+  .tl-item{position:relative;padding-bottom:26px}
+  .tl-item::before{content:'';position:absolute;left:-37px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+  .tl-item h3{font-size:19px;margin-bottom:2px}
+  .tl-item h3 span{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:2px}
+  .tl-item p{font-size:16px;color:var(--dim);margin:0;max-width:640px}
+  /* platforms strip */
+  .plat{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--ink)}
+  .plat span{flex:1 1 110px;text-align:center;padding:18px 8px;font-family:var(--sans);font-size:13px;letter-spacing:.1em;text-transform:uppercase;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+  .plat span:hover{background:var(--accent-soft)}
+  /* projects as articles */
+  .arts{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+  .art{padding:22px 0;border-bottom:1px solid var(--rule)}
+  .art h3{font-size:19px;margin-bottom:4px}
+  .art h3 .aw{font-family:var(--sans);font-size:11px;letter-spacing:.08em;color:var(--accent);border:1px solid var(--accent);border-radius:2px;padding:1px 7px;vertical-align:3px;margin-left:6px;white-space:nowrap}
+  .art p{font-size:15.5px;color:var(--dim);margin:0}
+  .art .src{font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+  /* colophon */
+  footer{padding:60px 0 80px}
+  footer h2{font-size:clamp(28px,5vw,44px);letter-spacing:-.02em;margin-bottom:8px}
+  footer .sub{color:var(--dim);margin-bottom:30px;font-style:italic}
+  .contact{display:flex;gap:26px;font-family:var(--sans);font-size:13.5px;letter-spacing:.08em;text-transform:uppercase;flex-wrap:wrap}
+  .colophon{margin-top:56px;border-top:3px double var(--ink);padding-top:16px;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  @media(max-width:760px){.lede{grid-template-columns:1fr}.arts{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div class="mast-top"><span>Est. first line of code, age 7</span><span>Vol. I — Web3 &amp; Systems</span></div>
+    <div class="mast-title">
+      <h1>Konrad Strachan</h1>
+      <p>Technologist · Developer · CTO</p>
+    </div>
+    <nav><a href="#story">The Story</a><a href="#record">Track Record</a><a href="#machines">Machines</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+  </div>
+
+  <div class="lede">
+    <div>
+      <h2>Who am I</h2>
+      <p class="drop">I wrote my first code at seven years old and have never stopped building, iterating, hacking and pushing the boundaries of what's possible. I'm a technologist, developer and CTO with a lifelong passion for coding, problem-solving and team building.</p>
+      <p>💡 Driven by an insatiable curiosity and an appetite for solving complex real-world problems. 🌟 My interests revolve around building systems where the complex interactions of different participants result in a <em>positive-sum outcome for all</em>.</p>
+      <p>🚀 I iterate rapidly, fail fast, and imbue everything with instrumentation and metrics. A tight cycle of building, measuring and learning — then repeating with learnings — is the strongest indicator of an effective team I know.</p>
+    </div>
+    <figure>
+      <img src="img/profile.jpg" alt="Konrad Strachan">
+      <figcaption class="caption">The author. Still writing code, decades after the first line.</figcaption>
+    </figure>
+  </div>
+
+  <div class="quote">
+    <blockquote>"The real test of any skill — architecture, system design or software development — is condensing complex technical elements into clearly articulable forms."</blockquote>
+    <cite>— On the KISS principle</cite>
+  </div>
+
+  <section id="record">
+    <div class="sec-head"><span class="no">No. 01</span><h2>The track record</h2></div>
+    <div class="tl">
+      <div class="tl-item">
+        <h3><span>CTO — Rhinofi (formerly DeversiFi)</span>High-performance execution infrastructure</h3>
+        <p>Navigated several shifts within web3 across previous market cycles. Built the matching engine and execution infrastructure that processed <strong>&gt;$1.5 billion USD in volume without issue</strong>, powering the first production-ready Layer 2 rollup DEX back in 2020.</p>
+      </div>
+      <div class="tl-item">
+        <h3><span>Engineering</span>CEX-grade experience, decentralised</h3>
+        <p>Users got the speed, liquidity and convenience of a centralised exchange with decentralisation, self-custody and trustlessness. Modular liquidity sources underpinned the markets — one the first AMM to blend price curves with dynamically quantised orderbook liquidity.</p>
+      </div>
+      <div class="tl-item">
+        <h3><span>Community</span>Events, talks &amp; knowledge sharing</h3>
+        <p>Attend tech and web3 events worldwide to collaborate with thought leaders on decentralisation, self-sovereignty, trustlessness, and the future of solver-based execution services.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="machines">
+    <div class="sec-head"><span class="no">No. 02</span><h2>Machines I have shipped on</h2></div>
+    <p>From blockchains and high-performance servers to embedded low-power devices and games consoles. If I have something, it's likely I've at least tried to modify and write some code for it.</p>
+    <div class="plat">
+      <span>Windows</span><span>Servers</span><span>Linux</span><span>SBC</span><span>Ethereum</span>
+      <span>N64</span><span>Pebble</span><span>Fitbit</span><span>CPC464</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sec-head"><span class="no">No. 03</span><h2>Selected projects &amp; hackathons</h2></div>
+    <div class="arts">
+      <div class="art"><h3><a href="https://github.com/konradstrachan/ethistanbulhackathon2023">Intent-based bridging marketplace</a><span class="aw">🏆 Award</span></h3><p>RFQ-style marketplace with solvers incentivised through fees to provide a bridging service.</p></div>
+      <div class="art"><h3><a href="https://github.com/konradstrachan/ethparishackathon23">Event-driven EVM development</a><span class="aw">🏆 Award</span></h3><p>Trustless callbacks for smart contracts, leveraging incentivised execution.</p></div>
+      <div class="art"><h3><a href="https://github.com/konradstrachan/superhackhackathon23">Trustless web3 Twitter bots</a></h3><p>Built using account abstraction.</p></div>
+      <div class="art"><h3><a href="https://github.com/konradstrachan/ethpraguehackathon23">AI-guided smart contract auditing</a><span class="aw">🏆 Award</span></h3><p>Solidity and Python with OpenAI; audit results stored verifiably on the blockchain.</p></div>
+      <div class="art"><h3><a href="https://github.com/konradstrachan/Pebble_ActivityWatchFace">ActivityFace</a></h3><p>Popular Pebble smartwatch watchface written in C and JavaScript.</p></div>
+      <div class="art"><h3><a href="https://github.com/konradstrachan/MatchingEngine">MatchingEngine</a></h3><p>High-performance spot market matching engine written in C++17.</p></div>
+      <div class="art"><h3><a href="https://github.com/konradstrachan/workload_cpp">Workload</a></h3><p>Lockless queuing for inter-thread orchestration prototype.</p></div>
+      <div class="art"><h3><a href="https://github.com/konradstrachan/ethdamhackathon23">Trustless multi-token vesting</a><span class="aw">🏆 Award</span></h3><p>Written in Solidity.</p></div>
+      <div class="art"><h3><a href="https://github.com/konradstrachan/ethlondonhackathon2023">Prediction market platform</a><span class="aw">🏆 Award</span></h3><p>Powered by an optimistic oracle, built on Tezos with SmartPy.</p></div>
+      <div class="art"><h3><a href="https://github.com/konradstrachan/devconnect2023aleohackathon">Algorithmic stablecoin</a><span class="aw">🏆 Award</span></h3><p>For ZK chain Aleo, written in Leo.</p></div>
+      <div class="art"><h3><a href="https://github.com/konradstrachan/Pebble_HopperGame">Hopper</a></h3><p>Simple isometric game for Pebble smartwatches, written in C.</p></div>
+      <div class="art"><h3><a href="https://github.com/konradstrachan/ConsoleExperiments">Console framebuffer experiments</a></h3><p>Experimental console framebuffer output, written in C++17.</p></div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h2>Correspondence welcome.</h2>
+    <p class="sub">I love talking about problems I've solved, sharing knowledge and presenting.</p>
+    <div class="contact">
+      <a href="https://www.linkedin.com/in/konrad-strachan/">LinkedIn</a>
+      <a href="https://github.com/konradstrachan/konradstrachan.github.io/blob/master/Konrad%20Strachan%20CV%202023.pdf">CV — PDF</a>
+      <a href="mailto:konrad.strachan@gmail.com">konrad.strachan@gmail.com</a>
+    </div>
+    <div class="colophon"><span>© Konrad Strachan</span><span>Redesign option 4/4 · Editorial magazine</span></div>
+  </footer>
+</div>
+</body>
+</html>

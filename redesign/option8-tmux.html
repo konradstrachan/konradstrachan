@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Konrad Strachan — tmux session</title>
+<style>
+  :root{
+    --bg:#101418; --pane:#151a21; --border:#2b3442; --text:#c8d3e0; --dim:#5f6f85;
+    --green:#7fd962; --cyan:#5cc8ff; --amber:#e8c66a; --red:#e06c75; --magenta:#d386e0;
+    --mono:'JetBrains Mono',ui-monospace,'Cascadia Code',Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0a0d11;color:var(--text);font-family:var(--mono);font-size:14px;line-height:1.6;display:flex;justify-content:center;padding:36px 16px 60px}
+  .session{width:100%;max-width:1080px}
+  .grid{display:grid;grid-template-columns:1.15fr 1fr;grid-template-rows:auto auto;gap:6px}
+  .pane{background:var(--pane);border:1px solid var(--border);padding:0;display:flex;flex-direction:column;min-width:0}
+  .pane-title{font-size:11.5px;color:var(--dim);background:var(--border);padding:2px 10px;display:flex;justify-content:space-between}
+  .pane-title b{color:var(--text);font-weight:600}
+  .pane-body{padding:16px 18px;overflow:hidden}
+  .p1{grid-row:1/3}
+  .p1 .pane-body{display:flex;flex-direction:column;gap:14px}
+  .p1 img{width:100%;max-width:320px;border-radius:6px;border:1px solid var(--border);align-self:center}
+  p{margin-bottom:12px;font-size:13.5px}
+  .hl{color:var(--green)}.hlc{color:var(--cyan)}.hla{color:var(--amber)}
+  .cmd{color:var(--dim);font-size:12.5px;margin-bottom:8px}
+  .cmd b{color:var(--green);font-weight:600}
+  /* htop */
+  .meter{margin-bottom:10px;font-size:13px}
+  .meter .lbl{display:flex;justify-content:space-between;color:var(--dim);margin-bottom:3px}
+  .meter .bar{height:14px;background:#1c222c;border-radius:2px;overflow:hidden;display:flex}
+  .meter .bar i{height:100%}
+  .m-g i{background:linear-gradient(90deg,#3c8a2e,var(--green))}
+  .m-c i{background:linear-gradient(90deg,#1d6f9e,var(--cyan))}
+  .m-a i{background:linear-gradient(90deg,#a3802c,var(--amber))}
+  .m-r i{background:linear-gradient(90deg,#9e3c46,var(--red))}
+  .htop-note{color:var(--dim);font-size:12px;margin-top:12px;border-top:1px solid var(--border);padding-top:10px}
+  /* project list */
+  .plist{list-style:none;font-size:13px}
+  .plist li{padding:3px 0;border-bottom:1px dashed #222a35;display:flex;gap:8px;align-items:baseline}
+  .plist li:last-child{border-bottom:none}
+  .plist .n{color:var(--dim);min-width:24px}
+  .plist a{color:var(--text);text-decoration:none}
+  .plist a:hover{color:var(--cyan)}
+  .plist .aw{color:var(--amber);font-size:11px;margin-left:auto;white-space:nowrap}
+  .contact{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .contact a{border:1px solid var(--border);border-radius:5px;padding:5px 12px;font-size:12.5px;color:var(--text);text-decoration:none}
+  .contact a:hover{border-color:var(--cyan);color:var(--cyan)}
+  /* tmux status bar */
+  .tbar{display:flex;align-items:center;font-size:12.5px;margin-top:6px;background:#1c222c;border-radius:4px;overflow:hidden}
+  .tbar .seg{padding:4px 12px;white-space:nowrap}
+  .t-sess{background:var(--green);color:#0a0d11;font-weight:700}
+  .t-win{color:var(--text)}
+  .t-win.on{background:var(--pane);font-weight:600}
+  .t-win i{font-style:normal;color:var(--dim);margin-right:6px}
+  .t-sp{flex:1}
+  .t-host{background:#2b3442;color:var(--text)}
+  .t-date{background:var(--cyan);color:#0a0d11;font-weight:600}
+  footer{text-align:center;color:#3c4657;font-size:12px;margin-top:26px}
+  @media(max-width:800px){.grid{grid-template-columns:1fr}.p1{grid-row:auto}}
+</style>
+</head>
+<body>
+<div class="session">
+  <div class="grid">
+    <!-- pane 0: bio -->
+    <div class="pane p1">
+      <div class="pane-title"><span><b>0:bio</b> — cat whoami.txt</span><span>80×46</span></div>
+      <div class="pane-body">
+        <div class="cmd"><b>$</b> cat ~/whoami.txt</div>
+        <img src="img/profile.jpg" alt="speaking">
+        <p><span class="hlc">Konrad Strachan</span> — technologist, developer and CTO. Wrote first code at <span class="hla">age 7</span> and never stopped building, iterating, hacking and pushing the boundaries of what's possible.</p>
+        <p>💡 Insatiable curiosity; appetite for complex real-world problems.</p>
+        <p>🌟 Builds systems where complex interactions produce a <span class="hl">positive-sum outcome for all</span>.</p>
+        <p>🚀 Iterate rapidly, fail fast, instrument everything. Build → measure → learn → repeat.</p>
+        <p>🧐 KISS advocate — condensing complex technical elements into clearly articulable forms.</p>
+        <div class="cmd"><b>$</b> uptime</div>
+        <p>30+ years shipping · <span class="hl">$1.5B+</span> volume processed without issue · first production L2 rollup DEX <span class="hla">2020</span></p>
+      </div>
+    </div>
+    <!-- pane 1: htop -->
+    <div class="pane">
+      <div class="pane-title"><span><b>1:htop</b> — konrad@strachan</span><span>load: shipping</span></div>
+      <div class="pane-body">
+        <div class="meter m-g"><div class="lbl"><span>Curiosity</span><span>98.2%</span></div><div class="bar"><i style="width:98%"></i></div></div>
+        <div class="meter m-c"><div class="lbl"><span>Instrumentation &amp; metrics</span><span>100%</span></div><div class="bar"><i style="width:100%"></i></div></div>
+        <div class="meter m-a"><div class="lbl"><span>Shipping rate</span><span>87.4%</span></div><div class="bar"><i style="width:87%"></i></div></div>
+        <div class="meter m-r"><div class="lbl"><span>Bureaucracy tolerance</span><span>3.1%</span></div><div class="bar"><i style="width:3%"></i></div></div>
+        <div class="meter m-g"><div class="lbl"><span>Matching engine (C++17)</span><span>$1.5B processed</span></div><div class="bar"><i style="width:100%"></i></div></div>
+        <div class="meter m-c"><div class="lbl"><span>Hackathons entered</span><span>6 🏆 awards</span></div><div class="bar"><i style="width:60%"></i></div></div>
+        <div class="htop-note">Tasks: 12 projects, 4 active threads · Load avg: build → measure → learn · Uptime: since age 7</div>
+      </div>
+    </div>
+    <!-- pane 2: projects + contact -->
+    <div class="pane">
+      <div class="pane-title"><span><b>2:projects</b> — ls -la ~/oss</span><span>12 items</span></div>
+      <div class="pane-body">
+        <ul class="plist">
+          <li><span class="n">01</span><a href="https://github.com/konradstrachan/ethistanbulhackathon2023">Intent-based bridging marketplace</a><span class="aw">🏆</span></li>
+          <li><span class="n">02</span><a href="https://github.com/konradstrachan/ethparishackathon23">Trustless event-driven EVM callbacks</a><span class="aw">🏆</span></li>
+          <li><span class="n">03</span><a href="https://github.com/konradstrachan/superhackhackathon23">Trustless web3 Twitter bots</a><span class="aw"></span></li>
+          <li><span class="n">04</span><a href="https://github.com/konradstrachan/ethpraguehackathon23">AI-guided contract auditing</a><span class="aw">🏆</span></li>
+          <li><span class="n">05</span><a href="https://github.com/konradstrachan/Pebble_ActivityWatchFace">ActivityFace Pebble watchface</a><span class="aw"></span></li>
+          <li><span class="n">06</span><a href="https://github.com/konradstrachan/MatchingEngine">MatchingEngine — C++17</a><span class="aw"></span></li>
+          <li><span class="n">07</span><a href="https://github.com/konradstrachan/workload_cpp">Lockless inter-thread orchestration</a><span class="aw"></span></li>
+          <li><span class="n">08</span><a href="https://github.com/konradstrachan/ethdamhackathon23">Trustless multi-token vesting</a><span class="aw">🏆</span></li>
+          <li><span class="n">09</span><a href="https://github.com/konradstrachan/ethlondonhackathon2023">Prediction market on Tezos</a><span class="aw">🏆</span></li>
+          <li><span class="n">10</span><a href="https://github.com/konradstrachan/devconnect2023aleohackathon">Algorithmic stablecoin for Aleo</a><span class="aw">🏆</span></li>
+          <li><span class="n">11</span><a href="https://github.com/konradstrachan/Pebble_HopperGame">Hopper isometric Pebble game</a><span class="aw"></span></li>
+          <li><span class="n">12</span><a href="https://github.com/konradstrachan/ConsoleExperiments">Console framebuffer experiments</a><span class="aw"></span></li>
+        </ul>
+        <div class="contact">
+          <a href="https://www.linkedin.com/in/konrad-strachan/">LinkedIn</a>
+          <a href="https://github.com/konradstrachan/konradstrachan.github.io/blob/master/Konrad%20Strachan%20CV%202023.pdf">CV.pdf</a>
+          <a href="mailto:konrad.strachan@gmail.com">email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tbar">
+    <span class="seg t-sess">[0] tmux</span>
+    <span class="seg t-win on"><i>0:</i>bio*</span>
+    <span class="seg t-win"><i>1:</i>htop</span>
+    <span class="seg t-win"><i>2:</i>projects</span>
+    <span class="seg t-win"><i>3:</i>contact</span>
+    <span class="t-sp"></span>
+    <span class="seg t-host">konrad@strachan</span>
+    <span class="seg t-date">build-measure-learn</span>
+  </div>
+
+  <footer>redesign option 8/12 · tmux session — konradstrachan.github.io</footer>
+</div>
+</body>
+</html>

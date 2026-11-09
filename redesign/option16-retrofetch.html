@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Konrad Strachan — retrofetch</title>
+<style>
+  :root{
+    --bg:#282828; --panel:#1d2021; --border:#3c3836; --text:#ebdbb2; --dim:#928374;
+    --red:#fb4934; --green:#b8bb26; --yellow:#fabd2f; --blue:#83a598; --purple:#d3869b; --aqua:#8ec07c; --orange:#fe8019;
+    --mono:'JetBrains Mono',ui-monospace,'Cascadia Code',Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:14.5px;line-height:1.7;padding:48px 24px 80px}
+  .wrap{max-width:920px;margin:0 auto}
+  .term{border:2px solid #504945;border-radius:4px;background:var(--panel);box-shadow:8px 8px 0 #141617,0 30px 90px rgba(0,0,0,.6);overflow:hidden}
+  .bar{display:flex;align-items:center;gap:8px;padding:12px 18px;border-bottom:2px solid #504945;background:#3c3836}
+  .dot{width:12px;height:12px;border-radius:50%}
+  .r{background:var(--red)}.y{background:var(--yellow)}.g{background:var(--green)}
+  .bar span{margin-left:12px;color:var(--text);font-size:12px}
+  .body{padding:32px 38px}
+  .prompt{color:var(--dim)}
+  .prompt b{color:var(--green);font-weight:600}
+  .prompt::after{content:' ❯';color:var(--orange)}
+  .fetch{display:flex;gap:44px;margin:24px 0 8px;flex-wrap:wrap}
+  .art{color:var(--yellow);font-size:13px;line-height:1.35;white-space:pre}
+  .art .a{color:var(--orange)}
+  .art .g{color:var(--green)}
+  .info{flex:1;min-width:320px}
+  .user{font-size:15px}
+  .user b{color:var(--aqua)}
+  .user span{color:var(--dim)}
+  .hr{color:#504945;margin:8px 0;white-space:pre;letter-spacing:-1px}
+  .row{display:flex;margin-bottom:2px}
+  .row .key{color:var(--yellow);min-width:130px;font-weight:600}
+  .row .val{color:var(--text)}
+  .row .val em{color:var(--orange);font-style:normal}
+  .old{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .old span{border:1px dashed #504945;border-radius:2px;padding:3px 10px;font-size:11.5px;color:var(--dim)}
+  h2{color:var(--aqua);font-size:15px;margin:38px 0 12px;font-weight:600}
+  h2::before{content:'■ ';color:var(--orange)}
+  p{margin-bottom:14px;max-width:72ch}
+  .hl{color:var(--green)}.hlc{color:var(--blue)}.hla{color:var(--yellow)}.hlo{color:var(--orange)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin:14px 0}
+  .chip{border:1px solid #504945;border-radius:2px;padding:9px 14px;font-size:13px;background:var(--bg);transition:.15s}
+  .chip:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
+  .projects{list-style:none;columns:2;column-gap:44px}
+  .projects li{margin-bottom:9px;break-inside:avoid;padding-left:20px;position:relative}
+  .projects li::before{content:'+';position:absolute;left:0;color:var(--green)}
+  .projects .tag{color:var(--yellow);font-size:12px}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{color:var(--aqua);text-decoration:underline}
+  .contact{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .contact a{border:1px solid #504945;border-radius:2px;padding:7px 18px;color:var(--text);font-size:13px;background:var(--bg)}
+  .contact a:hover{border-color:var(--aqua);color:var(--aqua);text-decoration:none}
+  footer{margin-top:46px;color:var(--dim);font-size:12px;text-align:center}
+  @media(max-width:700px){.projects{columns:1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="term">
+    <div class="bar"><i class="dot r"></i><i class="dot y"></i><i class="dot g"></i><span>konrad@strachan — retrofetch — gruvbox</span></div>
+    <div class="body">
+      <div class="prompt"><b>konrad@strachan</b> ~ retrofetch</div>
+
+      <div class="fetch">
+        <div class="art"><span class="a">┌─ CPC464 ──────┐</span>
+<span class="a">│</span> <span class="g">██╗  ██╗</span>  ⑦   <span class="a">│</span>
+<span class="a">│</span> <span class="g">██║ ██╔╝</span>       <span class="a">│</span>
+<span class="a">│</span> <span class="g">█████╔╝</span>  <span class="g">K7</span>   <span class="a">│</span>
+<span class="a">│</span> <span class="g">██╔═██╗</span>       <span class="a">│</span>
+<span class="a">│</span> <span class="g">██║  ██╗</span>       <span class="a">│</span>
+<span class="a">│</span> <span class="g">╚═╝  ╚═╝</span>       <span class="a">│</span>
+<span class="a">└───────────────┘</span>
+
+  konrad<span class="a">@</span>strachan
+  ─────────────────</div>
+        <div class="info">
+          <div class="user"><b>konrad</b><span>@</span><b>strachan</b></div>
+          <div class="hr">────────────────────────────────</div>
+          <div class="row"><span class="key">System</span><span class="val">Technologist · Developer · CTO</span></div>
+          <div class="row"><span class="key">First boot</span><span class="val">age 7 — wrote first code, <em>never stopped</em></span></div>
+          <div class="row"><span class="key">Machines</span><span class="val">CPC464 → N64 → Pebble → servers → blockchains</span></div>
+          <div class="row"><span class="key">Uptime</span><span class="val">30+ years of building, iterating, hacking</span></div>
+          <div class="row"><span class="key">Shell</span><span class="val">bash — KISS compliant since day one</span></div>
+          <div class="row"><span class="key">Load avg</span><span class="val">build → measure → learn → repeat</span></div>
+          <div class="row"><span class="key">High score</span><span class="val">$1.5B+ volume processed, 0 incidents</span></div>
+          <div class="row"><span class="key">Boss level</span><span class="val">first production L2 rollup DEX (2020)</span></div>
+          <div class="row"><span class="key">Trophies</span><span class="val">6 hackathon awards <em>🏆</em></span></div>
+          <div class="row"><span class="key">Cartridge</span><span class="val">C++17 · Solidity · Python · C · Leo · SmartPy</span></div>
+          <div class="old">
+            <span>CPC464 tape drive ✓</span><span>N64 homebrew ✓</span><span>Pebble apps ✓</span><span>Fitbit ✓</span><span>SBC ✓</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>philosophy</h2>
+      <p>💡 Insatiable curiosity; appetite for solving complex real-world problems.</p>
+      <p>🌟 Builds systems where complex interactions produce a <span class="hl">positive-sum outcome for all</span>.</p>
+      <p>🚀 Iterate rapidly, fail fast, instrument everything — metrics drive decisions. The tightest loop wins.</p>
+      <p>🧐 <span class="hlo">KISS advocate</span> — condensing complex technical elements into clearly articulable forms.</p>
+
+      <h2>career</h2>
+      <p>CTO for several years at <span class="hlc">Rhinofi</span> (formerly DeversiFi), navigating web3 market-cycle shifts. Built the high-performance matching engine and execution infrastructure processing <span class="hla">&gt;$1.5B USD in volume without issue</span>, powering the first production-ready Layer 2 rollup DEX in 2020 — CEX-grade speed, liquidity and convenience with decentralisation, self-custody and trustlessness. One liquidity source was the first AMM to blend price curves with dynamically quantised orderbook liquidity.</p>
+
+      <h2>things i have built have run on</h2>
+      <div class="grid">
+        <div class="chip">Windows</div><div class="chip">Servers</div><div class="chip">Linux</div>
+        <div class="chip">SBC</div><div class="chip">Ethereum</div><div class="chip">N64</div>
+        <div class="chip">Pebble</div><div class="chip">Fitbit</div><div class="chip">CPC464</div>
+      </div>
+
+      <h2>selected open source / hackathon projects</h2>
+      <ul class="projects">
+        <li><a href="https://github.com/konradstrachan/ethistanbulhackathon2023">Intent-based bridging marketplace</a> <span class="tag">🏆</span></li>
+        <li><a href="https://github.com/konradstrachan/ethparishackathon23">Trustless event-driven EVM callbacks</a> <span class="tag">🏆</span></li>
+        <li><a href="https://github.com/konradstrachan/superhackhackathon23">Trustless web3 Twitter bots</a></li>
+        <li><a href="https://github.com/konradstrachan/ethpraguehackathon23">AI-guided contract auditing</a> <span class="tag">🏆</span></li>
+        <li><a href="https://github.com/konradstrachan/Pebble_ActivityWatchFace">ActivityFace Pebble watchface</a></li>
+        <li><a href="https://github.com/konradstrachan/MatchingEngine">MatchingEngine — C++17</a></li>
+        <li><a href="https://github.com/konradstrachan/workload_cpp">Lockless inter-thread orchestration</a></li>
+        <li><a href="https://github.com/konradstrachan/ethdamhackathon23">Trustless multi-token vesting</a> <span class="tag">🏆</span></li>
+        <li><a href="https://github.com/konradstrachan/ethlondonhackathon2023">Prediction market on Tezos</a> <span class="tag">🏆</span></li>
+        <li><a href="https://github.com/konradstrachan/devconnect2023aleohackathon">Algorithmic stablecoin for Aleo</a> <span class="tag">🏆</span></li>
+        <li><a href="https://github.com/konradstrachan/Pebble_HopperGame">Hopper isometric Pebble game</a></li>
+        <li><a href="https://github.com/konradstrachan/ConsoleExperiments">Console framebuffer experiments</a></li>
+      </ul>
+
+      <h2>contact</h2>
+      <div class="contact">
+        <a href="https://www.linkedin.com/in/konrad-strachan/">LinkedIn</a>
+        <a href="https://github.com/konradstrachan/konradstrachan.github.io/blob/master/Konrad%20Strachan%20CV%202023.pdf">CV.pdf</a>
+        <a href="mailto:konrad.strachan@gmail.com">konrad.strachan@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <footer>redesign option 16/17 · retrofetch (gruvbox) — konradstrachan.github.io</footer>
+</div>
+</body>
+</html>
